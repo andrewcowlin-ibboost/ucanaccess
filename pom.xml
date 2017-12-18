@@ -208,16 +208,15 @@
     </dependencies>
 
     <distributionManagement>
-		<repository>
-			<id>archiva.internal</id>
-			<url>${release-repository}</url>
-		</repository>
-		<snapshotRepository>
-			<id>archiva.snapshots</id>
-			<url>${snapshot-repository}</url>
-			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
-	</distributionManagement>
+        <repository>
+            <id>${release-id}</id>
+            <url>${release-repository}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${snapshot-id}</id>
+            <url>${snapshot-repository}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <profiles>
         <profile>
