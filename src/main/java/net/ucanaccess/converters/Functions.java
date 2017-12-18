@@ -48,6 +48,7 @@ import net.ucanaccess.converters.TypesMap.AccessType;
 import net.ucanaccess.ext.FunctionType;
 import net.ucanaccess.jdbc.UcanaccessSQLException;
 import net.ucanaccess.jdbc.UcanaccessSQLException.ExceptionMessages;
+import net.ucanaccess.util.StringUtil;
 
 public final class Functions {
     private static Double       rnd;
@@ -1138,7 +1139,10 @@ public final class Functions {
         }
         if (ul == 2) {
             value = value.toLowerCase();
+        } else if(ul == 3) {
+            value = StringUtil.toTitleCase(value);
         }
+
         return value;
     }
 
